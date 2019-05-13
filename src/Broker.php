@@ -7,6 +7,9 @@ use \Kafka\Sasl\Scram;
 
 class Broker
 {
+    use \Psr\Log\LoggerAwareTrait;
+    use \Kafka\LoggerTrait;
+    
     private $groupBrokerId = null;
 
     private $topics = [];
